@@ -6,11 +6,11 @@
 0 silly argv }
 1 notice cli v4.0.0
 2 verbose rootPath D:\project\front-knowledge-precipitation
-3 verbose session 5e09e52df523c09a
+3 verbose session ab79d4b735e503e1
 4 verbose user-agent lerna/4.0.0/node@v14.15.0+x64 (win32)
 5 silly argv { _: [ 'publish' ], composed: 'publish', lernaVersion: '4.0.0' }
 6 verbose rootPath D:\project\front-knowledge-precipitation
-7 info current version 0.0.1
+7 info current version 0.0.2
 8 silly isAnythingCommitted
 9 verbose isAnythingCommitted 1
 10 silly getCurrentBranch
@@ -20,24 +20,24 @@
 14 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 1
 15 silly hasTags
 16 verbose hasTags true
-17 silly git-describe.sync "v0.0.1-1-g5044e87" => {"lastTagName":"v0.0.1","lastVersion":"v0.0.1","refCount":"1","sha":"5044e87","isDirty":false}
-18 info Looking for changed packages since v0.0.1
+17 silly git-describe.sync "v0.0.2-1-g27da003" => {"lastTagName":"v0.0.2","lastVersion":"v0.0.2","refCount":"1","sha":"27da003","isDirty":false}
+18 info Looking for changed packages since v0.0.2
 19 silly checking diff packages/demo
 20 silly found diff in packages/demo/package.json
 21 verbose filtered diff [ 'packages/demo/package.json' ]
 22 verbose updated lqldemo
-23 verbose git-describe undefined => "v0.0.1-1-g5044e87"
-24 silly git-describe parsed => {"lastTagName":"v0.0.1","lastVersion":"v0.0.1","refCount":"1","sha":"5044e87","isDirty":false}
+23 verbose git-describe undefined => "v0.0.2-1-g27da003"
+24 silly git-describe parsed => {"lastTagName":"v0.0.2","lastVersion":"v0.0.2","refCount":"1","sha":"27da003","isDirty":false}
 25 info execute Skipping releases
 26 silly lifecycle No script for "preversion" in "front-knowledge-precipitation", continuing
 27 silly lifecycle No script for "preversion" in "lqldemo", continuing
 28 silly lifecycle No script for "version" in "lqldemo", continuing
 29 silly lifecycle No script for "version" in "front-knowledge-precipitation", continuing
 30 silly gitAdd [ 'packages/demo/package.json', 'lerna.json' ]
-31 silly gitCommit v0.0.2
-32 verbose git [ 'commit', '-m', 'v0.0.2' ]
-33 silly gitTag v0.0.2
-34 verbose git [ 'tag', 'v0.0.2', '-m', 'v0.0.2' ]
+31 silly gitCommit v0.0.3
+32 verbose git [ 'commit', '-m', 'v0.0.3' ]
+33 silly gitTag v0.0.3
+34 verbose git [ 'tag', 'v0.0.3', '-m', 'v0.0.3' ]
 35 silly lifecycle No script for "postversion" in "lqldemo", continuing
 36 silly lifecycle No script for "postversion" in "front-knowledge-precipitation", continuing
 37 info git Pushing tags...
@@ -49,7 +49,7 @@
 42 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
 42 warn ENOLICENSE See https://choosealicense.com for additional guidance.
 43 silly getCurrentSHA
-44 verbose getCurrentSHA bf420a4a2a90440dd82fa7ea12c099ad2a6169cf
+44 verbose getCurrentSHA 1d896cfa683e9e639b8c633cc20fa7681233cdbd
 45 silly lifecycle No script for "prepublish" in "front-knowledge-precipitation", continuing
 46 silly lifecycle No script for "prepare" in "front-knowledge-precipitation", continuing
 47 silly lifecycle No script for "prepublishOnly" in "front-knowledge-precipitation", continuing
