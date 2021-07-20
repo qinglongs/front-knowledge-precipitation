@@ -1,0 +1,94 @@
+0 silly argv {
+0 silly argv   _: [ 'publish' ],
+0 silly argv   composed: 'publish',
+0 silly argv   lernaVersion: '4.0.0',
+0 silly argv   '$0': 'C:\\Program Files\\nodejs\\node_modules\\lerna\\cli.js'
+0 silly argv }
+1 notice cli v4.0.0
+2 verbose rootPath D:\project\front-knowledge-precipitation
+3 verbose session 5e09e52df523c09a
+4 verbose user-agent lerna/4.0.0/node@v14.15.0+x64 (win32)
+5 silly argv { _: [ 'publish' ], composed: 'publish', lernaVersion: '4.0.0' }
+6 verbose rootPath D:\project\front-knowledge-precipitation
+7 info current version 0.0.1
+8 silly isAnythingCommitted
+9 verbose isAnythingCommitted 1
+10 silly getCurrentBranch
+11 verbose currentBranch master
+12 silly remoteBranchExists
+13 silly isBehindUpstream
+14 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 1
+15 silly hasTags
+16 verbose hasTags true
+17 silly git-describe.sync "v0.0.1-1-g5044e87" => {"lastTagName":"v0.0.1","lastVersion":"v0.0.1","refCount":"1","sha":"5044e87","isDirty":false}
+18 info Looking for changed packages since v0.0.1
+19 silly checking diff packages/demo
+20 silly found diff in packages/demo/package.json
+21 verbose filtered diff [ 'packages/demo/package.json' ]
+22 verbose updated lqldemo
+23 verbose git-describe undefined => "v0.0.1-1-g5044e87"
+24 silly git-describe parsed => {"lastTagName":"v0.0.1","lastVersion":"v0.0.1","refCount":"1","sha":"5044e87","isDirty":false}
+25 info execute Skipping releases
+26 silly lifecycle No script for "preversion" in "front-knowledge-precipitation", continuing
+27 silly lifecycle No script for "preversion" in "lqldemo", continuing
+28 silly lifecycle No script for "version" in "lqldemo", continuing
+29 silly lifecycle No script for "version" in "front-knowledge-precipitation", continuing
+30 silly gitAdd [ 'packages/demo/package.json', 'lerna.json' ]
+31 silly gitCommit v0.0.2
+32 verbose git [ 'commit', '-m', 'v0.0.2' ]
+33 silly gitTag v0.0.2
+34 verbose git [ 'tag', 'v0.0.2', '-m', 'v0.0.2' ]
+35 silly lifecycle No script for "postversion" in "lqldemo", continuing
+36 silly lifecycle No script for "postversion" in "front-knowledge-precipitation", continuing
+37 info git Pushing tags...
+38 silly gitPush origin master
+39 info publish Publishing packages to npm...
+40 notice Skipping all user and access validation due to third-party registry
+41 notice Make sure you're authenticated properly ¯\_(ツ)_/¯
+42 warn ENOLICENSE Package lqldemo is missing a license.
+42 warn ENOLICENSE One way to fix this is to add a LICENSE.md file to the root of this repository.
+42 warn ENOLICENSE See https://choosealicense.com for additional guidance.
+43 silly getCurrentSHA
+44 verbose getCurrentSHA bf420a4a2a90440dd82fa7ea12c099ad2a6169cf
+45 silly lifecycle No script for "prepublish" in "front-knowledge-precipitation", continuing
+46 silly lifecycle No script for "prepare" in "front-knowledge-precipitation", continuing
+47 silly lifecycle No script for "prepublishOnly" in "front-knowledge-precipitation", continuing
+48 silly lifecycle No script for "prepack" in "front-knowledge-precipitation", continuing
+49 verbose pack-directory packages\demo
+50 silly lifecycle No script for "prepublish" in "lqldemo", continuing
+51 silly lifecycle No script for "prepare" in "lqldemo", continuing
+52 silly lifecycle No script for "prepublishOnly" in "lqldemo", continuing
+53 silly lifecycle No script for "prepack" in "lqldemo", continuing
+54 silly lifecycle No script for "postpack" in "lqldemo", continuing
+55 verbose packed packages\demo
+56 silly lifecycle No script for "postpack" in "front-knowledge-precipitation", continuing
+57 verbose publish lqldemo
+58 silly FetchError: request to http://registry.npmjs.org/lqldemo failed, reason: read ECONNRESET
+58 silly     at ClientRequest.<anonymous> (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:110:14)
+58 silly     at ClientRequest.emit (events.js:315:20)
+58 silly     at Socket.socketErrorListener (_http_client.js:469:9)
+58 silly     at Socket.emit (events.js:327:22)
+58 silly     at emitErrorNT (internal/streams/destroy.js:106:8)
+58 silly     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+58 silly     at processTicksAndRejections (internal/process/task_queues.js:80:21)
+58 silly  FetchError: request to http://registry.npmjs.org/lqldemo failed, reason: read ECONNRESET
+58 silly     at ClientRequest.<anonymous> (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:110:14)
+58 silly     at ClientRequest.emit (events.js:315:20)
+58 silly     at Socket.socketErrorListener (_http_client.js:469:9)
+58 silly     at Socket.emit (events.js:327:22)
+58 silly     at emitErrorNT (internal/streams/destroy.js:106:8)
+58 silly     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+58 silly     at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+58 silly   code: 'ECONNRESET',
+58 silly   errno: 'ECONNRESET',
+58 silly   syscall: 'read',
+58 silly   type: 'system'
+58 silly }
+59 error ECONNRESET request to http://registry.npmjs.org/lqldemo failed, reason: read ECONNRESET
+60 error FetchError: request to http://registry.npmjs.org/lqldemo failed, reason: read ECONNRESET
+60 error     at ClientRequest.<anonymous> (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:110:14)
+60 error     at ClientRequest.emit (events.js:315:20)
+60 error     at Socket.socketErrorListener (_http_client.js:469:9)
+60 error     at Socket.emit (events.js:327:22)
+60 error     at emitErrorNT (internal/streams/destroy.js:106:8)
+60 error     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
