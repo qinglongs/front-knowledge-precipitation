@@ -5,7 +5,7 @@
   "author": "李清龙 <924229679@qq.com>",
   "homepage": "",
   "license": "ISC",
-  "main": "lib/demo.js",
+  "main": "lib/demo.tsx",
   "directories": {
     "lib": "lib",
     "test": "__tests__"

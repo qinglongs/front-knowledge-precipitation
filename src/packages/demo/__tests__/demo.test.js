@@ -1,6 +1,6 @@
-'use strict';
 
-const demo = require('..');
+
+const demo = require('../../demo');
 
 describe('demo', () => {
     it('needs tests');
