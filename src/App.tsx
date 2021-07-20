@@ -1,9 +1,14 @@
-import React from 'react';
-import Demo from './packages/demo/lib/demo';
+import React, { useEffect } from 'react';
+import demo from 'lqldemo';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  useEffect(() => {
+    demo();
+  })
+
   return (
     <div className="App">
       <header className="App-header">
@@ -19,7 +24,7 @@ function App() {
         >
           Learn React
         </a>
-        <Demo/>
+
       </header>
     </div>
   );
