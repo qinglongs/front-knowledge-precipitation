@@ -1,5 +1,5 @@
 {
-  "name": "demo",
+  "name": "lqldemo",
   "version": "0.0.1",
   "description": "demo",
   "author": "李清龙 <924229679@qq.com>",
@@ -18,5 +18,6 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  }
+  },
+  "gitHead": "e311aff6b65309541f2d2412078c96665029332d"
 }
