@@ -1,13 +1,8 @@
-import React, { useEffect } from 'react';
-import demo from 'lqldemo';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
 
-  useEffect(() => {
-    demo();
-  })
 
   return (
     <div className="App">

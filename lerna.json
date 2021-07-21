@@ -2,5 +2,17 @@
   "packages": [
     "src/packages/*"
   ],
-  "version": "0.0.6"
+  "version": "independent",
+  "command": {
+    "ignoreChanges": [
+      "ignored-file",
+      "**/__tests__/**",
+      "**/*.md",
+      "**/tsconfig.json"
+    ],
+    "version": {
+      "conventionalCommits": true,
+      "message": "chore(release): publish"
+    }
+  }
 }

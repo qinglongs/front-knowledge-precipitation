@@ -1,7 +1,5 @@
 0 silly argv {
 0 silly argv   _: [ 'add' ],
-0 silly argv   dev: true,
-0 silly argv   D: true,
 0 silly argv   globs: [],
 0 silly argv   lernaVersion: '4.0.0',
 0 silly argv   '$0': 'C:\\Program Files\\nodejs\\node_modules\\lerna\\cli.js',
@@ -9,10 +7,13 @@
 0 silly argv }
 1 notice cli v4.0.0
 2 verbose rootPath D:\project\front-knowledge-precipitation
-3 error FetchError: request to http://registry.npmjs.org/typescript failed, reason: read ECONNRESET
-3 error     at ClientRequest.<anonymous> (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:110:14)
-3 error     at ClientRequest.emit (events.js:315:20)
-3 error     at Socket.socketErrorListener (_http_client.js:469:9)
-3 error     at Socket.emit (events.js:327:22)
-3 error     at emitErrorNT (internal/streams/destroy.js:106:8)
-3 error     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+3 error JSONError: Unexpected token "}" (0x7D) in JSON at position 491 while parsing near "...cc20fa7681233cdbd\",\n}" in src\packages\demo\package.json
+3 error
+3 error [0m [90m 22 |[39m   }[33m,[39m[0m
+3 error [0m [90m 23 |[39m   [32m"gitHead"[39m[33m:[39m [32m"1d896cfa683e9e639b8c633cc20fa7681233cdbd"[39m[33m,[39m[0m
+3 error [0m[31m[1m>[22m[39m[90m 24 |[39m }[0m
+3 error [0m [90m    |[39m [31m[1m^[22m[39m[0m
+3 error
+3 error     at parseJson (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\parse-json\index.js:29:21)
+3 error     at parse (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\load-json-file\index.js:15:9)
+3 error     at module.exports (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\load-json-file\index.js:18:47)

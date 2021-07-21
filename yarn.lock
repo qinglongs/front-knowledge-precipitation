@@ -8644,10 +8644,10 @@ lower-case@^2.0.2:
   dependencies:
     tslib "^2.0.3"
 
-lqldemo@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.npmjs.org/lqldemo/-/lqldemo-0.0.5.tgz#571eaa3de939dfc753e613f114a0a1ef1878e22e"
-  integrity sha512-8QMaEcOuzjInw2S/CyH8Y5sx6jhmqD0BXq++ZLatxrrPjR36qA+GcltusdQfWDQdexn+BZ0tw7xJpe5XRdCqCA==
+lqldemo@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.npmjs.org/lqldemo/-/lqldemo-0.0.6.tgz#503bed382be76f988eb8bc17300d4eed41e0f07a"
+  integrity sha512-SuSqpDJQMkkZF+hu1Oejb/1xFKk0WVlMD8p5rctzrGR3Pd6uDxfBeRz44acgxc+5WBd12SaRn7BN1U/4AzB9IA==
 
 lru-cache@^5.1.1:
   version "5.1.1"
