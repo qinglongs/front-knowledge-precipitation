@@ -1,19 +1,147 @@
 0 silly argv {
-0 silly argv   _: [ 'add' ],
-0 silly argv   globs: [],
+0 silly argv   _: [ 'publish' ],
+0 silly argv   composed: 'publish',
 0 silly argv   lernaVersion: '4.0.0',
-0 silly argv   '$0': 'C:\\Program Files\\nodejs\\node_modules\\lerna\\cli.js',
-0 silly argv   pkg: 'typescript'
+0 silly argv   '$0': 'C:\\Program Files\\nodejs\\node_modules\\lerna\\cli.js'
 0 silly argv }
 1 notice cli v4.0.0
 2 verbose rootPath D:\project\front-knowledge-precipitation
-3 error JSONError: Unexpected token "}" (0x7D) in JSON at position 491 while parsing near "...cc20fa7681233cdbd\",\n}" in src\packages\demo\package.json
-3 error
-3 error [0m [90m 22 |[39m   }[33m,[39m[0m
-3 error [0m [90m 23 |[39m   [32m"gitHead"[39m[33m:[39m [32m"1d896cfa683e9e639b8c633cc20fa7681233cdbd"[39m[33m,[39m[0m
-3 error [0m[31m[1m>[22m[39m[90m 24 |[39m }[0m
-3 error [0m [90m    |[39m [31m[1m^[22m[39m[0m
-3 error
-3 error     at parseJson (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\parse-json\index.js:29:21)
-3 error     at parse (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\load-json-file\index.js:15:9)
-3 error     at module.exports (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\load-json-file\index.js:18:47)
+3 info versioning independent
+4 verbose session 7fa4d120e467602d
+5 verbose user-agent lerna/4.0.0/node@v14.15.0+x64 (win32)
+6 silly argv { _: [ 'publish' ], composed: 'publish', lernaVersion: '4.0.0' }
+7 verbose rootPath D:\project\front-knowledge-precipitation
+8 silly isAnythingCommitted
+9 verbose isAnythingCommitted 1
+10 silly getCurrentBranch
+11 verbose currentBranch master
+12 silly remoteBranchExists
+13 silly isBehindUpstream
+14 silly isBehindUpstream master is behind origin/master by 0 commit(s) and ahead by 1
+15 silly hasTags
+16 verbose hasTags true
+17 silly git-describe.sync "v0.0.6-1-g7cfbde2" => {"lastTagName":"v0.0.6","lastVersion":"v0.0.6","refCount":"1","sha":"7cfbde2","isDirty":false}
+18 info Looking for changed packages since v0.0.6
+19 silly checking diff src/packages/ts-demo
+20 silly found diff in src/packages/ts-demo/LICENSE.md
+20 silly found diff in src/packages/ts-demo/README.md
+20 silly found diff in src/packages/ts-demo/__tests__/demo.test.js
+20 silly found diff in src/packages/ts-demo/lib/demo.d.ts
+20 silly found diff in src/packages/ts-demo/lib/demo.js
+20 silly found diff in src/packages/ts-demo/lib/demo.js.map
+20 silly found diff in src/packages/ts-demo/package-lock.json
+20 silly found diff in src/packages/ts-demo/package.json
+20 silly found diff in src/packages/ts-demo/src/demo.ts
+20 silly found diff in src/packages/ts-demo/tsconfig.json
+20 silly found diff in src/packages/ts-demo/yarn.lock
+21 verbose filtered diff [
+21 verbose filtered diff   'src/packages/ts-demo/LICENSE.md',
+21 verbose filtered diff   'src/packages/ts-demo/README.md',
+21 verbose filtered diff   'src/packages/ts-demo/__tests__/demo.test.js',
+21 verbose filtered diff   'src/packages/ts-demo/lib/demo.d.ts',
+21 verbose filtered diff   'src/packages/ts-demo/lib/demo.js',
+21 verbose filtered diff   'src/packages/ts-demo/lib/demo.js.map',
+21 verbose filtered diff   'src/packages/ts-demo/package-lock.json',
+21 verbose filtered diff   'src/packages/ts-demo/package.json',
+21 verbose filtered diff   'src/packages/ts-demo/src/demo.ts',
+21 verbose filtered diff   'src/packages/ts-demo/tsconfig.json',
+21 verbose filtered diff   'src/packages/ts-demo/yarn.lock'
+21 verbose filtered diff ]
+22 verbose updated lqldemo
+23 verbose git-describe undefined => "v0.0.6-1-g7cfbde2"
+24 silly git-describe parsed => {"lastTagName":"v0.0.6","lastVersion":"v0.0.6","refCount":"1","sha":"7cfbde2","isDirty":false}
+25 silly independent for lqldemo at D:\project\front-knowledge-precipitation\src\packages\ts-demo
+26 verbose getChangelogConfig using preset "conventional-changelog-angular"
+27 silly npa Result {
+27 silly npa   type: 'tag',
+27 silly npa   registry: true,
+27 silly npa   where: undefined,
+27 silly npa   raw: 'conventional-changelog-angular',
+27 silly npa   name: 'conventional-changelog-angular',
+27 silly npa   escapedName: 'conventional-changelog-angular',
+27 silly npa   scope: undefined,
+27 silly npa   rawSpec: '',
+27 silly npa   saveSpec: null,
+27 silly npa   fetchSpec: 'latest',
+27 silly npa   gitRange: undefined,
+27 silly npa   gitCommittish: undefined,
+27 silly npa   hosted: undefined
+27 silly npa }
+28 verbose getChangelogConfig Attempting to resolve preset "conventional-changelog-angular"
+29 info getChangelogConfig Successfully resolved preset "conventional-changelog-angular"
+30 verbose independent increment 0.0.6 by patch
+31 info execute Skipping releases
+32 silly lifecycle No script for "preversion" in "front-knowledge-precipitation", continuing
+33 silly lifecycle No script for "preversion" in "lqldemo", continuing
+34 silly lifecycle No script for "version" in "lqldemo", continuing
+35 silly independent for lqldemo at D:\project\front-knowledge-precipitation\src\packages\ts-demo
+36 silly independent writing new entry: "## 0.0.7 (2021-07-21)\n\n**Note:** Version bump only for package lqldemo\n\n\n\n"
+37 verbose independent wrote D:\project\front-knowledge-precipitation\src\packages\ts-demo\CHANGELOG.md
+38 silly lifecycle No script for "version" in "front-knowledge-precipitation", continuing
+39 silly gitAdd [
+39 silly gitAdd   'src/packages/ts-demo/package.json',
+39 silly gitAdd   'src/packages/ts-demo/package-lock.json',
+39 silly gitAdd   'src/packages/ts-demo/CHANGELOG.md'
+39 silly gitAdd ]
+40 silly gitCommit chore(release): publish
+40 silly gitCommit
+40 silly gitCommit  - lqldemo@0.0.7
+41 verbose git [
+41 verbose git   'commit',
+41 verbose git   '-F',
+41 verbose git   'C:\\Users\\lqllm\\AppData\\Local\\Temp\\478576e1-8e13-4de0-a517-16930a90f5de\\lerna-commit.txt'
+41 verbose git ]
+42 silly gitTag lqldemo@0.0.7
+43 verbose git [ 'tag', 'lqldemo@0.0.7', '-m', 'lqldemo@0.0.7' ]
+44 silly lifecycle No script for "postversion" in "lqldemo", continuing
+45 silly lifecycle No script for "postversion" in "front-knowledge-precipitation", continuing
+46 info git Pushing tags...
+47 silly gitPush origin master
+48 info publish Publishing packages to npm...
+49 notice Skipping all user and access validation due to third-party registry
+50 notice Make sure you're authenticated properly ¯\_(ツ)_/¯
+51 silly getCurrentSHA
+52 verbose getCurrentSHA 56bb0e8fc624defee6c790ff4c12f7e4ec1d8c92
+53 silly lifecycle No script for "prepublish" in "front-knowledge-precipitation", continuing
+54 silly lifecycle No script for "prepare" in "front-knowledge-precipitation", continuing
+55 silly lifecycle No script for "prepublishOnly" in "front-knowledge-precipitation", continuing
+56 silly lifecycle No script for "prepack" in "front-knowledge-precipitation", continuing
+57 verbose pack-directory src\packages\ts-demo
+58 silly lifecycle No script for "prepublish" in "lqldemo", continuing
+59 silly lifecycle No script for "prepare" in "lqldemo", continuing
+60 silly lifecycle No script for "prepublishOnly" in "lqldemo", continuing
+61 silly lifecycle No script for "prepack" in "lqldemo", continuing
+62 silly lifecycle No script for "postpack" in "lqldemo", continuing
+63 verbose packed src\packages\ts-demo
+64 silly lifecycle No script for "postpack" in "front-knowledge-precipitation", continuing
+65 verbose publish lqldemo
+66 silly FetchError: request to http://registry.npmjs.org/lqldemo failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+66 silly     at ClientRequest.<anonymous> (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:110:14)
+66 silly     at ClientRequest.emit (events.js:315:20)
+66 silly     at Socket.socketErrorListener (_http_client.js:469:9)
+66 silly     at Socket.emit (events.js:327:22)
+66 silly     at emitErrorNT (internal/streams/destroy.js:106:8)
+66 silly     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+66 silly     at processTicksAndRejections (internal/process/task_queues.js:80:21)
+66 silly  FetchError: request to http://registry.npmjs.org/lqldemo failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+66 silly     at ClientRequest.<anonymous> (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:110:14)
+66 silly     at ClientRequest.emit (events.js:315:20)
+66 silly     at Socket.socketErrorListener (_http_client.js:469:9)
+66 silly     at Socket.emit (events.js:327:22)
+66 silly     at emitErrorNT (internal/streams/destroy.js:106:8)
+66 silly     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
+66 silly     at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+66 silly   code: 'ENOTFOUND',
+66 silly   errno: 'ENOTFOUND',
+66 silly   syscall: 'getaddrinfo',
+66 silly   hostname: 'registry.npmjs.org',
+66 silly   type: 'system'
+66 silly }
+67 error ENOTFOUND request to http://registry.npmjs.org/lqldemo failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+68 error FetchError: request to http://registry.npmjs.org/lqldemo failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org
+68 error     at ClientRequest.<anonymous> (C:\Users\lqllm\AppData\Roaming\nvm\v14.15.0\node_modules\lerna\node_modules\minipass-fetch\lib\index.js:110:14)
+68 error     at ClientRequest.emit (events.js:315:20)
+68 error     at Socket.socketErrorListener (_http_client.js:469:9)
+68 error     at Socket.emit (events.js:327:22)
+68 error     at emitErrorNT (internal/streams/destroy.js:106:8)
+68 error     at emitErrorCloseNT (internal/streams/destroy.js:74:3)
