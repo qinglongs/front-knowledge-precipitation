@@ -1,6 +1,6 @@
-'use strict';
 
-const tsxDemo = require('..');
+
+const tsxDemo = require('../../tsx-demo');
 
 describe('tsx-demo', () => {
     it('needs tests');

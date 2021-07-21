@@ -32,6 +32,6 @@
     "**/*.spec.ts"
   ],
   "include": [
-    "src"
+    "src",
   ]
 }

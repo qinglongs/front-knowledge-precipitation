@@ -21,4 +21,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-/src/packages/**/node_modules
+/packages/**/node_modules
