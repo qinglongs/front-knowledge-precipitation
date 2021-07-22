@@ -1,3 +1,4 @@
+import TsxDemo from 'tsx-demo';
 import logo from './logo.svg';
 import './App.css';
 
@@ -19,7 +20,7 @@ function App() {
         >
           Learn React
         </a>
-
+        <TsxDemo />
       </header>
     </div>
   );

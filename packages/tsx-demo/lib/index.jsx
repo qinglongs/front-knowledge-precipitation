@@ -1,6 +1,9 @@
-import React from 'react';
-const TsxDemo = () => {
-    return <h1>111222</h1>;
+'use strict';
+
+var jsxRuntime = require('react/jsx-runtime');
+
+var TsxDemo = function () {
+    return jsxRuntime.jsx("h1", { children: "111222" }, void 0);
 };
-export default TsxDemo;
-//# sourceMappingURL=index.jsx.map
+
+module.exports = TsxDemo;

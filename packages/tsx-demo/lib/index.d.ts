@@ -1,3 +1,3 @@
-/// <reference types="react" />
-declare const TsxDemo: () => JSX.Element;
+import React from 'react';
+declare const TsxDemo: React.FC<any>;
 export default TsxDemo;

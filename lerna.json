@@ -18,6 +18,6 @@
       "registry": "https://registry.npmjs.org"
     }
   },
-  "useWorkspaces": true,
-  "npmClient": "yarn"
+  "npmClient": "yarn",
+  "useWorkspaces": true
 }
