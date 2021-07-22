@@ -12,7 +12,7 @@ var TsxDemo = function () {
     var onClickButton = function () {
         setCount(count + 1);
     };
-    return React__default['default'].createElement(antd.Button, { type: "primary", onClick: onClickButton }, "111222");
+    return React__default['default'].createElement(antd.Button, { type: "primary", onClick: onClickButton }, count);
 };
 
 module.exports = TsxDemo;

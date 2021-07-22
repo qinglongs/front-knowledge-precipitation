@@ -10,7 +10,7 @@ const TsxDemo: React.FC<any> = () => {
     setCount(count + 1)
   }
 
-  return <Button type="primary" onClick={onClickButton} >111222</Button>
+  return <Button type="primary" onClick={onClickButton} >{count}</Button>
 }
 
 export default TsxDemo;
