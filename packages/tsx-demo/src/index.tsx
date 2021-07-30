@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from 'antd';
 import { useState } from 'react';
 
+import './style.less';
+
 const TsxDemo: React.FC<any> = () => {
 
   const [count, setCount] = useState(1);
@@ -10,7 +12,12 @@ const TsxDemo: React.FC<any> = () => {
     setCount(count + 1)
   }
 
-  return <Button type="primary" onClick={onClickButton} >{count}</Button>
+  return (
+    <div>
+      <div className="box"></div>
+      <Button type="primary" onClick={onClickButton} >{count}</Button>
+    </div>
+  )
 }
 
 export default TsxDemo;

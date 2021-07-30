@@ -13,11 +13,12 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "declaration": true
+    "declaration": true,
   },
   "compileOnSave": false,
   "exclude": [
     "node_modules/*",
-    "packages/dist/*"
+    "**/*.spec.ts",
+    "**/*.less"
   ]
 }
