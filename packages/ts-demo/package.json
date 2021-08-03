@@ -18,10 +18,10 @@
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
-    "tsc": "tsc"
+    "build": "rollup -c"
   },
   "gitHead": "56bb0e8fc624defee6c790ff4c12f7e4ec1d8c92",
-  "dependencies": {
+  "devDependencies": {
     "rollup-plugin-typescript2": "^0.30.0"
   }
 }

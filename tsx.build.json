@@ -3,7 +3,6 @@
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "jsx": "react",
-    "jsxFactory": "React.createElement",
     "moduleResolution": "node",
     "noImplicitAny": false,
     "noUnusedLocals": true,
@@ -13,7 +12,7 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "resolveJsonModule": true,
-    "declaration": true,
+    "declaration": true
   },
   "compileOnSave": false,
   "exclude": [
