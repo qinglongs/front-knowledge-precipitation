@@ -8,5 +8,5 @@ export default {
     file: "lib/index.js",
     format: "cjs",
   },
-  plugins: [typescript({ tsconfig: "tsconfig.json" }), postcss({})],
+  plugins: [postcss(), typescript()],
 };
