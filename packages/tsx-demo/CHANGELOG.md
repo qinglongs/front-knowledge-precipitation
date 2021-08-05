@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/qinglongs/front-knowledge-precipitation/compare/tsx-demo@0.1.0...tsx-demo@0.2.0) (2021-08-05)
+
+
+### Features
+
+* **project:** 完善项目配置 ([451aeb9](https://github.com/qinglongs/front-knowledge-precipitation/commit/451aeb96e0bc106c961fa44ec2134d094cf8448c))
+
+
+
+
+
 # [0.1.0](https://github.com/qinglongs/front-knowledge-precipitation/compare/tsx-demo@0.0.8...tsx-demo@0.1.0) (2021-08-03)
 
 
