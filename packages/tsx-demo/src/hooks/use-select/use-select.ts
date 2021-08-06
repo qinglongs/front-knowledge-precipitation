@@ -1,19 +1,24 @@
-import { useRef, useState } from 'react';
-import { cloneDeep, debounce } from 'lodash';
-import { SelectValue } from 'antd/lib/select';
-import useDeepComparisonEffect from '@/hooks/use-deep-compare-effect/use-deep-compare-effect';
+import { useRef, useState } from "react";
+import { cloneDeep, debounce } from "lodash";
+import { SelectValue } from "antd/lib/select";
+import useDeepComparisonEffect from "../../hooks/use-deep-compare-effect/use-deep-compare-effect";
 
-import { UseSelect } from './types/types';
+import { UseSelect } from "./types/types";
 
 /**
  * @method 下拉选择支持分页/不分页请求
  */
 const useSelect: UseSelect = (GetList, options) => {
   // 解构配置对象
-  const { formatSearchValue, extraParams = {}, mode = '', isPaging = false } = options;
+  const {
+    formatSearchValue,
+    extraParams = {},
+    mode = "",
+    isPaging = false,
+  } = options;
 
   // 分页参数
-  const pagingParams = useRef<Record<'current' | 'size', number>>({
+  const pagingParams = useRef<Record<"current" | "size", number>>({
     current: 1,
     size: 10,
   });
@@ -40,7 +45,9 @@ const useSelect: UseSelect = (GetList, options) => {
   const fetchPagingList = async (refresh: boolean) => {
     if (isFetching.current) return;
 
-    pagingParams.current.current = refresh ? 1 : pagingParams.current.current + 1;
+    pagingParams.current.current = refresh
+      ? 1
+      : pagingParams.current.current + 1;
     isNomore.current = refresh ? false : isNomore.current;
 
     if (isNomore.current) return;
@@ -48,7 +55,9 @@ const useSelect: UseSelect = (GetList, options) => {
     try {
       isFetching.current = true;
 
-      const { data: { total, list } } = await GetList({
+      const {
+        data: { total, list },
+      } = await GetList({
         ...pagingParams.current,
         ...extraParams,
         ...searchValue.current,
@@ -104,11 +113,10 @@ const useSelect: UseSelect = (GetList, options) => {
    * @param {string} val 搜索值
    */
   const onSearch = (val: string) => {
-    if (!formatSearchValue) throw Error('attribute options.formatSearchValue must be passed');
+    if (!formatSearchValue)
+      throw Error("attribute options.formatSearchValue must be passed");
     searchValue.current = val ? formatSearchValue(val) : {};
     fetchList(true);
-
-
   };
 
   /**
@@ -139,7 +147,9 @@ const useSelect: UseSelect = (GetList, options) => {
       fetchList(true);
     } else {
       // 需要判断是多选还是单选
-      setSelectValue(Array.isArray(node) ? node.map((i) => i.props) : node.props);
+      setSelectValue(
+        Array.isArray(node) ? node.map((i) => i.props) : node.props
+      );
     }
   };
 
@@ -160,7 +170,6 @@ const useSelect: UseSelect = (GetList, options) => {
   useDeepComparisonEffect(() => {
     fetchList(true);
   }, [extraParams]);
-
 
   return {
     value: selectValue,

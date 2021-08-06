@@ -1,6 +1,5 @@
-import { useState, useRef, useMemo } from 'react';
-import useDeepCompareEffect from '../use-deep-compare-effect/use-deep-compare-effect';
-
+import { useState, useRef, useMemo } from "react";
+import useDeepCompareEffect from "../use-deep-compare-effect/use-deep-compare-effect";
 
 /**
  * @method 虚拟滚动自定义hooks
@@ -9,7 +8,10 @@ import useDeepCompareEffect from '../use-deep-compare-effect/use-deep-compare-ef
  * @param {number} fiexdParam.containerHeight 滚动容器的高度
  * @param dataSource 需要渲染的数组
  */
-const useVirtualList = <Item>(fiexdParam: { itemHeight: number, containerHeight: number }, dataSource: Item[]) => {
+const useVirtualList = <Item>(
+  fiexdParam: { itemHeight: number; containerHeight: number },
+  dataSource: Item[]
+) => {
   const { itemHeight, containerHeight } = fiexdParam;
 
   // 数据总数
@@ -34,11 +36,11 @@ const useVirtualList = <Item>(fiexdParam: { itemHeight: number, containerHeight:
   const itemNumber = useRef<number>(0);
 
   if (!itemHeight) {
-    console.error('place enter a vaild itemHeight');
+    console.error("place enter a vaild itemHeight");
   }
 
   if (!Array.isArray(dataSource)) {
-    console.error('dataSource must be an array')
+    console.error("dataSource must be an array");
   }
 
   /**
@@ -46,17 +48,21 @@ const useVirtualList = <Item>(fiexdParam: { itemHeight: number, containerHeight:
    * @param scrollTop 滚动条到顶部的距离
    */
   const onScroll: React.UIEventHandler<HTMLDivElement> = (e) => {
-
     // 滚动条到顶部的距离
     const scrollTop = (e.target as any).scrollTop;
 
     // 计算当前应该展示到的元素
-    const activeIndex = ((scrollTop / itemHeight) >> 0);
+    const activeIndex = (scrollTop / itemHeight) >> 0;
 
     // 屏幕可见区域中，最后一个元素索引
     lastIndex.current = activeIndex;
 
-    setList(dataSource.slice(lastIndex.current, lastIndex.current + itemNumber.current));
+    setList(
+      dataSource.slice(
+        lastIndex.current,
+        lastIndex.current + itemNumber.current
+      )
+    );
     setOffsetTop(activeIndex * itemHeight);
   };
 
@@ -72,7 +78,7 @@ const useVirtualList = <Item>(fiexdParam: { itemHeight: number, containerHeight:
 
     // 截取一屏可展示的元素
     setList(dataSource.slice(lastIndex.current, itemNumber.current));
-  }, [containerHeight, dataSource, itemHeight, total])
+  }, [containerHeight, dataSource, itemHeight, total]);
 
   return { list, totalHeight, offsetTop, onScroll };
 };

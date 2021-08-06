@@ -1,21 +1,28 @@
-import { useRef, useState } from 'react';
-import moment from 'moment';
-import { cloneDeep } from 'lodash';
+import { useRef, useState } from "react";
+import moment from "moment";
+import { cloneDeep } from "lodash";
 
-import useDeepCompareEffect from '@/hooks/use-deep-compare-effect/use-deep-compare-effect';
+import useDeepCompareEffect from "../../hooks/use-deep-compare-effect/use-deep-compare-effect";
 
-import { FormInstance } from 'antd/lib/form'
-import { DateForamt, GetPageing, ExtraParams, PageParams, UseFormTableReturn, Loading } from './types/types';
+import { FormInstance } from "antd/lib/form";
+import {
+  DateForamt,
+  GetPageing,
+  ExtraParams,
+  PageParams,
+  UseFormTableReturn,
+  Loading,
+} from "./types/types";
 
 /** 时间格式化对象 */
 const foramt: DateForamt = {
-  date: 'YYYY-MM-DD',
-  dateTime: 'YYYY-MM-DD HH:mm:ss',
-  dateTimeRange: 'YYYY-MM-DD HH:mm:ss',
-  dateRange: 'YYYY-MM-DD',
-  hours: 'HH:mm:ss',
-  minute: 'mm:ss',
-}
+  date: "YYYY-MM-DD",
+  dateTime: "YYYY-MM-DD HH:mm:ss",
+  dateTimeRange: "YYYY-MM-DD HH:mm:ss",
+  dateRange: "YYYY-MM-DD",
+  hours: "HH:mm:ss",
+  minute: "mm:ss",
+};
 
 /**
  * @method 搜索列表组件自定义hooks
@@ -24,13 +31,21 @@ const foramt: DateForamt = {
  * @param extraParams 额外的参数
  * @param delValue 提交表单时，如果需要改变某些字段的值，可以传入这个参数
  */
-function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormInstance, extraParams?: ExtraParams, delValue?: (val: any) => void): UseFormTableReturn<any, any> {
-
+function useSearchTable<ListData, FormValue>(
+  GetPaging: GetPageing,
+  form: FormInstance,
+  extraParams?: ExtraParams,
+  delValue?: (val: any) => void
+): UseFormTableReturn<any, any> {
   // 分页数据
   const [list, setList] = useState<ListData[]>([]);
 
   // 是否正在加载
-  const [loading, setLoading] = useState<Loading>({ table: false, reset: false, search: false });
+  const [loading, setLoading] = useState<Loading>({
+    table: false,
+    reset: false,
+    search: false,
+  });
 
   // 总数
   const total = useRef<number>(0);
@@ -50,22 +65,28 @@ function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormIn
   /**
    * @method 请求列表数据
    */
-  const fetchList = async (type?: 'search' | 'reset') => {
+  const fetchList = async (type?: "search" | "reset") => {
     if (isFetching.current) return;
     const deepLoding = cloneDeep(loading);
 
     try {
       isFetching.current = true;
-      setLoading({ ...deepLoding, table: true, [type || 'table']: true });
-      const response = await GetPaging({ ...extraParams, ...formValue.current, ...pageParams.current });
-      const { data: { list, total: totalNum } } = response
+      setLoading({ ...deepLoding, table: true, [type || "table"]: true });
+      const response = await GetPaging({
+        ...extraParams,
+        ...formValue.current,
+        ...pageParams.current,
+      });
+      const {
+        data: { list, total: totalNum },
+      } = response;
       total.current = totalNum;
       setList(list);
     } finally {
       isFetching.current = false;
-      setLoading({ ...deepLoding, table: false, [type || 'table']: false });
+      setLoading({ ...deepLoding, table: false, [type || "table"]: false });
     }
-  }
+  };
 
   /**
    * @method 重置列表
@@ -76,30 +97,30 @@ function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormIn
     // 重置分页
     pageParams.current = {
       page: 1,
-      size: 10
+      size: 10,
     };
     // 重置表单搜索值
     formValue.current = {};
-    await fetchList('reset');
-  }
+    await fetchList("reset");
+  };
 
   /**
    * @method 刷新表单
    */
   const reloadTable = async () => {
     return fetchList();
-  }
+  };
 
   /**
    * @method 提交表单
    */
   async function onSubmit() {
-    const value = await form.validateFields()
+    const value = await form.validateFields();
     const valueKeys = Object.keys(value);
 
     // 判断提交是否为空
-    const isEmpty = valueKeys.every(key => {
-      return value[key] === undefined
+    const isEmpty = valueKeys.every((key) => {
+      return value[key] === undefined;
     });
     if (isEmpty) return;
 
@@ -108,9 +129,9 @@ function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormIn
         // 删除没有值的key
         if (value[key] === undefined) delete value[key];
         // 是否有需要特殊处理的表单项
-        if (key.indexOf('|') > -1 && value[key] !== undefined) {
+        if (key.indexOf("|") > -1 && value[key] !== undefined) {
           // 分隔字符串，得到rangeKey配置
-          const splitKey = key.split('|');
+          const splitKey = key.split("|");
           // 处理单独的日期选择
           if (moment.isMoment(value[key])) {
             const [formKey, type] = splitKey as [string, keyof DateForamt];
@@ -118,7 +139,11 @@ function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormIn
             delete value[key];
           } else {
             // 解构rangeKey
-            const [start, end, type] = splitKey as [string, string, keyof DateForamt];
+            const [start, end, type] = splitKey as [
+              string,
+              string,
+              keyof DateForamt
+            ];
             // 处理日期选择
             if (moment.isMoment(value[key][0])) {
               value[start] = moment(value[0]).format(foramt[type]);
@@ -136,10 +161,9 @@ function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormIn
       resolve(value);
       delValue && delValue(value);
       formValue.current = value;
-      fetchList('search');
-    })
+      fetchList("search");
+    });
   }
-
 
   /**
    * @method 页码change事件
@@ -148,10 +172,10 @@ function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormIn
   const onChange = (page: number) => {
     pageParams.current = {
       ...pageParams.current,
-      page: page
-    }
+      page: page,
+    };
     fetchList();
-  }
+  };
 
   /**
    * @method 展示条数change事件
@@ -164,18 +188,15 @@ function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormIn
       size,
     };
     fetchList();
-  }
+  };
 
   // 初始化
   useDeepCompareEffect(() => {
     fetchList();
-  }, [extraParams])
-
+  }, [extraParams]);
 
   return {
-    formProps: {
-
-    },
+    formProps: {},
     reloadTable,
     onReset,
     onSubmit,
@@ -192,10 +213,9 @@ function useSearchTable<ListData, FormValue>(GetPaging: GetPageing, form: FormIn
         showSizeChanger: true,
         onShowSizeChange,
         onChange,
-      }
+      },
     },
-
-  }
+  };
 }
 
 export default useSearchTable;
