@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/qinglongs/front-knowledge-precipitation/compare/tsx-demo@0.3.0...tsx-demo@0.4.0) (2021-08-06)
+
+
+### Features
+
+* **tsx-demo:** 依赖转移 ([a979fd9](https://github.com/qinglongs/front-knowledge-precipitation/commit/a979fd917c3ba0fdef6a2cbe8ddf12f474e8072e))
+
+
+
+
+
 # [0.3.0](https://github.com/qinglongs/front-knowledge-precipitation/compare/tsx-demo@0.2.0...tsx-demo@0.3.0) (2021-08-06)
 
 
