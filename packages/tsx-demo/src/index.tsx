@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import { useState } from 'react';
+import { useDeepComparisonEffect } from './hooks';
 
 import './style.less';
 
@@ -11,6 +12,11 @@ const TsxDemo: React.FC<any> = () => {
   const onClickButton = () => {
     setCount(count + 1)
   }
+
+  useDeepComparisonEffect(() => {
+    console.log('hello world');
+
+  }, [12313])
 
   return (
     <div>
