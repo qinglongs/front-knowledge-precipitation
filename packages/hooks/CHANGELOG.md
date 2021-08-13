@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/qinglongs/front-knowledge-precipitation/compare/l-hooks@0.1.0...l-hooks@0.1.1) (2021-08-13)
+
+
+### Bug Fixes
+
+* **hooks:** 修复useDeepComparisonEffect问题 ([233fd78](https://github.com/qinglongs/front-knowledge-precipitation/commit/233fd78bb3a0216a3cd4302ac54cd985cefa42bf))
+
+
+
+
+
 # 0.1.0 (2021-08-13)
 
 
