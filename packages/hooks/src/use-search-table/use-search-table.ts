@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import moment from "moment";
 import { cloneDeep } from "lodash";
 
-import useDeepCompareEffect from "../../hooks/use-deep-compare-effect/use-deep-compare-effect";
+import useDeepCompareEffect from "../use-deep-compare-effect/use-deep-compare-effect";
 
 import { FormInstance } from "antd/lib/form";
 import {

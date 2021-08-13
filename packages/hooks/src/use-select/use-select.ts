@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { cloneDeep, debounce } from "lodash";
 import { SelectValue } from "antd/lib/select";
-import useDeepComparisonEffect from "../../hooks/use-deep-compare-effect/use-deep-compare-effect";
+import useDeepComparisonEffect from "../use-deep-compare-effect/use-deep-compare-effect";
 
 import { UseSelect } from "./types/types";
 

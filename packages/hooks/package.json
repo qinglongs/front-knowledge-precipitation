@@ -1,0 +1,39 @@
+{
+  "name": "l-hooks",
+  "version": "0.0.1",
+  "description": "> TODO: description",
+  "author": "李清龙 <924229679@qq.com>",
+  "homepage": "https://github.com/qinglongs/front-knowledge-precipitation#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qinglongs/front-knowledge-precipitation.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "rollup -c"
+  },
+  "bugs": {
+    "url": "https://github.com/qinglongs/front-knowledge-precipitation/issues"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.172",
+    "antd": "^4.16.9",
+    "lodash": "^4.17.21",
+    "postcss": "^8.3.6",
+    "rollup-plugin-postcss": "2.4.1",
+    "rollup-plugin-typescript2": "^0.30.0"
+  }
+}
