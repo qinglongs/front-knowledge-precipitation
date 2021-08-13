@@ -1,4 +1,4 @@
-import { UseCascader } from './types/types';
+import type { UseCascader } from "./types/types";
 /**
  * @method 级联选择自定义hooks
  */

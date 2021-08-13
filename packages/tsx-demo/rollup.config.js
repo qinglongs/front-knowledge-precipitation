@@ -7,11 +7,11 @@ export default [
   {
     input: "src/demo/index.tsx",
     output: {
-      file: "libdemo/index.js",
+      file: "lib/index.js",
     },
     plugins: [
       postcss({ extract: path.resolve("lib/demo/style/style.css") }),
-      typescript({ tsconfig: "tsconfig.json", exclude: ["*.less"] }),
+      typescript({ exclude: ["*.less"] }),
     ],
   },
 ];

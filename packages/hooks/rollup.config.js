@@ -8,6 +8,6 @@ export default [
       file: "lib/index.js",
       format: "esm",
     },
-    plugins: [typescript({ tsconfig: "tsconfig.json" })],
+    plugins: [typescript()],
   },
 ];

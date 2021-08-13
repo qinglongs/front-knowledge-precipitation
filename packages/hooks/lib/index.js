@@ -84,11 +84,10 @@ function useDeepComparison(val, defaultValue) {
  */
 var useDeepComparisonEffect = function (effect, deps) {
     if (!Array.isArray(deps))
-        throw Error('deps has to be an array');
-    if (!effect || typeof effect !== 'function')
-        throw Error('effect has to be a function');
-    var list = deps.filter(function (i) { return i; });
-    var data = useDeepComparison(list, []);
+        throw Error("deps has to be an array");
+    if (!effect || typeof effect !== "function")
+        throw Error("effect has to be a function");
+    var data = useDeepComparison(deps, []);
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(effect, data);
 };
@@ -116,7 +115,14 @@ var useCascader = function (_a) {
     useDeepComparisonEffect(function () {
         fetchList(extraParams);
     }, [extraParams]);
-    return { props: { options: options, showSearch: true, allowClear: true, notFoundContent: '暂无数据' } };
+    return {
+        props: {
+            options: options,
+            showSearch: true,
+            allowClear: true,
+            notFoundContent: "暂无数据",
+        },
+    };
 };
 
 /**
