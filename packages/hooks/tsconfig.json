@@ -2,6 +2,10 @@
   "extends": "../../tsx.build.json",
   "compilerOptions": {
     "outDir": "./lib",
+    "lib": [
+      "ES2015",
+      "dom"
+    ]
   },
   "include": [
     "./src"

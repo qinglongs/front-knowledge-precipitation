@@ -3,6 +3,60 @@ import { isEqual, cloneDeep, debounce } from 'lodash';
 import moment from 'moment';
 import { message } from 'antd';
 
+/**
+ * @method 深比较变量，监听变化并返回新的变量
+ * @returns  返回的深比较处理过后的数据
+ */
+function useDeepComparison(val, defaultValue) {
+    var _a = useState(val || defaultValue), value = _a[0], setValue = _a[1];
+    if (val && !isEqual(val, value)) {
+        setValue(cloneDeep(val));
+    }
+    return value;
+}
+
+/**
+ * @method 深比较副作用hooks
+ */
+var useDeepComparisonEffect = function (effect, deps) {
+    if (!Array.isArray(deps))
+        throw Error("deps has to be an array");
+    if (!effect || typeof effect !== "function")
+        throw Error("effect has to be a function");
+    var data = useDeepComparison(deps, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    useEffect(effect, data);
+};
+
+/**
+ * @method 简易懒加载自定义hooks
+ * @param nodeId 节点id
+ * @param containerId 容器id，不指定默认为document
+ */
+var useLazyLoad = function (nodeId, containerId) {
+    // 是否展示
+    var _a = useState(false), isShow = _a[0], setIsShow = _a[1];
+    useEffect(function () {
+        var node = document.querySelector(nodeId);
+        var container = document.querySelector(containerId);
+        if (container && node) {
+            var intersectionObserver_1 = new IntersectionObserver(function (entries) {
+                if (entries[0].intersectionRatio <= 0)
+                    return;
+                setIsShow(true);
+            }, { root: container, threshold: [0, 0.5, 1] });
+            // start observing
+            intersectionObserver_1.observe(node);
+            return function () {
+                // end observing
+                intersectionObserver_1.unobserve(node);
+                setIsShow(false);
+            };
+        }
+    }, [containerId, nodeId]);
+    return { isShow: isShow };
+};
+
 /*! *****************************************************************************
 Copyright (c) Microsoft Corporation.
 
@@ -66,93 +120,6 @@ function __generator(thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 }
-
-/**
- * @method 深比较变量，监听变化并返回新的变量
- * @returns  返回的深比较处理过后的数据
- */
-function useDeepComparison(val, defaultValue) {
-    var _a = useState(val || defaultValue), value = _a[0], setValue = _a[1];
-    if (val && !isEqual(val, value)) {
-        setValue(cloneDeep(val));
-    }
-    return value;
-}
-
-/**
- * @method 深比较副作用hooks
- */
-var useDeepComparisonEffect = function (effect, deps) {
-    if (!Array.isArray(deps))
-        throw Error("deps has to be an array");
-    if (!effect || typeof effect !== "function")
-        throw Error("effect has to be a function");
-    var data = useDeepComparison(deps, []);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    useEffect(effect, data);
-};
-
-/**
- * @method 级联选择自定义hooks
- */
-var useCascader = function (_a) {
-    var getList = _a.getList, _b = _a.extraParams, extraParams = _b === void 0 ? {} : _b, formatOptions = _a.formatOptions;
-    // 级联选择数组
-    var _c = useState([]), options = _c[0], setOptions = _c[1];
-    var fetchList = function (params) { return __awaiter(void 0, void 0, void 0, function () {
-        var data, temp;
-        return __generator(this, function (_a) {
-            switch (_a.label) {
-                case 0: return [4 /*yield*/, getList(params)];
-                case 1:
-                    data = (_a.sent()).data;
-                    temp = formatOptions(data);
-                    setOptions(temp);
-                    return [2 /*return*/];
-            }
-        });
-    }); };
-    useDeepComparisonEffect(function () {
-        fetchList(extraParams);
-    }, [extraParams]);
-    return {
-        props: {
-            options: options,
-            showSearch: true,
-            allowClear: true,
-            notFoundContent: "暂无数据",
-        },
-    };
-};
-
-/**
- * @method 简易懒加载自定义hooks
- * @param nodeId 节点id
- * @param containerId 容器id，不指定默认为document
- */
-var useLazyLoad = function (nodeId, containerId) {
-    // 是否展示
-    var _a = useState(false), isShow = _a[0], setIsShow = _a[1];
-    useEffect(function () {
-        var node = document.querySelector(nodeId);
-        var container = document.querySelector(containerId);
-        if (container && node) {
-            var intersectionObserver_1 = new IntersectionObserver(function (entries) {
-                if (entries[0].intersectionRatio <= 0)
-                    return;
-                setIsShow(true);
-            }, { root: container, threshold: [0, 0.5, 1] });
-            // start observing
-            intersectionObserver_1.observe(node);
-            return function () {
-                // end observing
-                intersectionObserver_1.unobserve(node);
-                setIsShow(false);
-            };
-        }
-    }, [containerId, nodeId]);
-    return { isShow: isShow };
-};
 
 /** 时间格式化对象 */
 var foramt = {
@@ -360,7 +327,7 @@ function useSearchTable(GetPaging, form, extraParams, delValue) {
  */
 var useSelect = function (GetList, options) {
     // 解构配置对象
-    var formatSearchValue = options.formatSearchValue, _a = options.extraParams, extraParams = _a === void 0 ? {} : _a, _b = options.mode, mode = _b === void 0 ? "" : _b, _c = options.isPaging, isPaging = _c === void 0 ? false : _c;
+    var formatSearchValue = options.formatSearchValue, _a = options.extraParams, extraParams = _a === void 0 ? {} : _a, mode = options.mode, _b = options.isPaging, isPaging = _b === void 0 ? false : _b;
     // 分页参数
     var pagingParams = useRef({
         current: 1,
@@ -373,9 +340,9 @@ var useSelect = function (GetList, options) {
     // 是否没有更多
     var isNomore = useRef(false);
     // 选中的数据
-    var _d = useState(null), selectValue = _d[0], setSelectValue = _d[1];
+    var _c = useState(null), selectValue = _c[0], setSelectValue = _c[1];
     // 选项数据
-    var _e = useState([]), option = _e[0], setOption = _e[1];
+    var _d = useState([]), option = _d[0], setOption = _d[1];
     /**
      * @method 分页请求
      * @param {boolean} refresh 是否刷新
@@ -712,4 +679,4 @@ var useVirtualList = function (fiexdParam, dataSource) {
     return { list: list, totalHeight: totalHeight, offsetTop: offsetTop, onScroll: onScroll };
 };
 
-export { useCascader, useDeepComparison, useDeepComparisonEffect, useLazyLoad, useSearchTable, useSelect, useUploadFile, useVirtualList };
+export { useDeepComparison, useDeepComparisonEffect, useLazyLoad, useSearchTable, useSelect, useUploadFile, useVirtualList };

@@ -31,6 +31,7 @@
   "devDependencies": {
     "@types/lodash": "^4.14.172",
     "antd": "^4.16.9",
+    "less": "^4.1.1",
     "lodash": "^4.17.21",
     "postcss": "^8.3.6",
     "rollup-plugin-postcss": "2.4.1",
