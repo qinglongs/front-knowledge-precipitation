@@ -5,7 +5,23 @@ import { cloneDeep } from "lodash";
 import { UploadProps } from "antd/lib/upload";
 import { UploadFile } from "antd/lib/upload/interface";
 
-import { UseUploadFile } from "./types/types";
+type PostFile<Response> = (
+  formData: FormData,
+  onprogress: any
+) => Promise<Response>;
+
+type UseUploadFile = <T>(
+  postFile: PostFile<T>,
+  {
+    isBreak,
+    fileLength,
+    getBreakInfo,
+  }?: {
+    isBreak?: boolean;
+    fileLength?: number;
+    getBreakInfo?: (filename: string) => Promise<Record<"data", number>>;
+  }
+) => { uploadProps: UploadProps; loading: boolean; progress: number };
 
 /**
  * @method 上传文件自定义hooks

@@ -3366,7 +3366,7 @@ ansi-styles@^5.0.0:
   resolved "https://npm.biaoguoworks.com/ansi-styles/-/ansi-styles-5.2.0.tgz#07449690ad45777d1924ac2abb2fc8895dba836b"
   integrity sha1-B0SWkK1Fd30ZJKwquy/IiV26g2s=
 
-antd@^4.16.9:
+antd@^4.16.11, antd@^4.16.9:
   version "4.16.11"
   resolved "https://npm.biaoguoworks.com/antd/-/antd-4.16.11.tgz#924116b0de7370f914e9de6c8c5a4bf019b3d668"
   integrity sha1-kkEWsN5zcPkU6d5sjFpL8Bmz1mg=
@@ -8936,6 +8936,11 @@ klona@^2.0.4:
   version "2.0.4"
   resolved "https://npm.biaoguoworks.com/klona/-/klona-2.0.4.tgz#7bb1e3affb0cb8624547ef7e8f6708ea2e39dfc0"
   integrity sha1-e7Hjr/sMuGJFR+9+j2cI6i4538A=
+
+l-hooks@^0.1.1:
+  version "0.1.1"
+  resolved "https://npm.biaoguoworks.com/l-hooks/-/l-hooks-0.1.1.tgz#6c1709c6642364c02c9c2c9e80d3669d0c4f6d0a"
+  integrity sha1-bBcJxmQjZMAsnCyegNNmnQxPbQo=
 
 language-subtag-registry@~0.3.2:
   version "0.3.21"
