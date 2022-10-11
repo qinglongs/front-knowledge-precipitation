@@ -16,7 +16,7 @@ type UseUploadFile = <T>(
     isBreak,
     fileLength,
     getBreakInfo,
-  }?: {
+  }: {
     isBreak?: boolean;
     fileLength?: number;
     getBreakInfo?: (filename: string) => Promise<Record<"data", number>>;
@@ -102,7 +102,7 @@ const useUploadFile: UseUploadFile = (
 
       try {
         setLoading(true);
-        const res = await postFile(formData, ({ progress }) => {
+        const res = await postFile(formData, ({ progress }:any) => {
           setProgress(progress);
         });
         setLoading(false);

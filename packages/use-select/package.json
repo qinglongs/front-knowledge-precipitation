@@ -13,6 +13,8 @@
   "author": "924229679@qq.com",
   "license": "ISC",
   "dependencies": {
+    "@types/lodash.clonedeep": "^4.5.7",
+    "@types/lodash.debounce": "^4.0.7",
     "lodash.clonedeep": "^4.5.0",
     "lodash.debounce": "^4.0.8",
     "use-deep-compare-effect": "^0.0.1"

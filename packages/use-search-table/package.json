@@ -14,6 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash.clonedeep": "^4.5.0",
+    "@types/lodash.clonedeep": "^4.5.7",
     "use-deep-compare-effect": "^0.0.1"
   }
 }
