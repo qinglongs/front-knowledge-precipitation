@@ -1,0 +1,15 @@
+{
+  "name": "use-lazy-load",
+  "version": "0.0.1",
+  "description": "简易懒加载自定义hooks",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config ./rollup.config.js"
+  },
+  "keywords": [
+    "简易懒加载自定义hooks"
+  ],
+  "author": "924229679@qq.com",
+  "license": "ISC"
+}

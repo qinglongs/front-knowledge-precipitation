@@ -1,0 +1,19 @@
+{
+  "name": "use-deep-comparison",
+  "version": "0.0.1",
+  "description": "深比较依赖，当依赖发生变化是返回新数据",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config ./rollup.config.js"
+  },
+  "keywords": [
+    "深比较变量，监听变化并返回新的变量"
+  ],
+  "author": "924229679@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.isequal": "^4.5.0"
+  }
+}

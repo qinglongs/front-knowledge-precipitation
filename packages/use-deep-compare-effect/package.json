@@ -1,0 +1,18 @@
+{
+  "name": "use-deep-compare-effect",
+  "version": "0.0.1",
+  "description": "深比较effect hooks",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config ./rollup.config.js"
+  },
+  "keywords": [
+    "深比较副作用hooks"
+  ],
+  "author": "924229679@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "use-deep-comparison": "^0.0.1"
+  }
+}

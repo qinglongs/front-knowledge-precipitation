@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Button } from 'antd';
 import TsxDemo from 'tsx-demo';
-import { useDeepComparisonEffect } from 'l-hooks';
 import logo from './logo.svg';
 import './App.css';
 import 'antd/dist/antd.css';
@@ -9,11 +8,6 @@ import 'antd/dist/antd.css';
 
 function App() {
   const [count, setCount] = useState(1);
-
-  useDeepComparisonEffect(() => {
-    console.log('hello world', count);
-  }, [count])
-
 
   return (
     <div className="App">

@@ -1,9 +1,0 @@
-{
-  "extends": "../../ts.build.json",
-  "compilerOptions": {
-    "outDir": "./lib"
-  },
-  "include": [
-    "./src"
-  ]
-}

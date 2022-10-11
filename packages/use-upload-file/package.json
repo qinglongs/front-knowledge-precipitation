@@ -1,0 +1,18 @@
+{
+  "name": "use-upload-file",
+  "version": "0.0.1",
+  "description": "antd3.0文件上传hooks",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config ./rollup.config.js"
+  },
+  "keywords": [
+    "antd3.0文件上传hooks"
+  ],
+  "author": "924229679@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0"
+  }
+}

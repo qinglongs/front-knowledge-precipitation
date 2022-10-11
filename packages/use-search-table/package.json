@@ -1,0 +1,19 @@
+{
+  "name": "use-search-table",
+  "version": "0.0.1",
+  "description": "基于antd4.0封装的搜索表格hooks",
+  "main": "./src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup --config ./rollup.config.js"
+  },
+  "keywords": [
+    "基于antd4.0封装的搜索表格hooks"
+  ],
+  "author": "924229679@qq.com",
+  "license": "ISC",
+  "dependencies": {
+    "lodash.clonedeep": "^4.5.0",
+    "use-deep-compare-effect": "^0.0.1"
+  }
+}
