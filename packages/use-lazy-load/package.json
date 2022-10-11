@@ -1,5 +1,5 @@
 {
-  "name": "use-lazy-load",
+  "name": "use-node-lazy-load",
   "version": "0.0.2",
   "description": "简易懒加载自定义hooks",
   "main": "./src/index.ts",
