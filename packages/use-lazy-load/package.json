@@ -11,9 +11,7 @@
     "简易懒加载自定义hooks"
   ],
   "homepage": "https://github.com/qinglongs/react-hooks",
-  "repository": {
-    "url": "https://github.com/qinglongs/react-hooks"
-  },
   "author": "924229679@qq.com",
-  "license": "ISC"
+  "license": "ISC",
+  "gitHead": "085456981bdb5bbb9bd853a1bc5f3b7c1e8bab5a"
 }
