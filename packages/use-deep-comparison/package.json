@@ -1,6 +1,6 @@
 {
   "name": "use-deep-comparison",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "深比较依赖，当依赖发生变化是返回新数据",
   "main": "./src/index.ts",
   "scripts": {
@@ -13,9 +13,9 @@
   "author": "924229679@qq.com",
   "license": "ISC",
   "dependencies": {
-    "lodash.clonedeep": "^4.5.0",
-    "lodash.isequal": "^4.5.0",
     "@types/lodash.clonedeep": "^4.5.7",
-    "@types/lodash.isequal": "^4.5.6"
+    "@types/lodash.isequal": "^4.5.6",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.isequal": "^4.5.0"
   }
 }

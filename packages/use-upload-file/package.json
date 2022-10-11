@@ -1,6 +1,6 @@
 {
   "name": "use-upload-file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "antd3.0文件上传hooks",
   "main": "./src/index.ts",
   "scripts": {
@@ -13,8 +13,7 @@
   "author": "924229679@qq.com",
   "license": "ISC",
   "dependencies": {
-    "lodash.clonedeep": "^4.5.0",
-    "@types/lodash.clonedeep": "^4.5.7"
-    
+    "@types/lodash.clonedeep": "^4.5.7",
+    "lodash.clonedeep": "^4.5.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "use-deep-compare-effect",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "深比较effect hooks",
   "main": "./src/index.ts",
   "scripts": {
@@ -13,6 +13,6 @@
   "author": "924229679@qq.com",
   "license": "ISC",
   "dependencies": {
-    "use-deep-comparison": "^0.0.1"
+    "use-deep-comparison": "^0.0.2"
   }
 }

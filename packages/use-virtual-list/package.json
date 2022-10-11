@@ -1,6 +1,6 @@
 {
   "name": "use-virtual-list",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "虚拟滚动hooks",
   "main": "./src/index.ts",
   "scripts": {
@@ -13,6 +13,6 @@
   "author": "924229679@qq.com",
   "license": "ISC",
   "dependencies": {
-    "use-deep-compare-effect": "^0.0.1"
+    "use-deep-compare-effect": "^0.0.2"
   }
 }
