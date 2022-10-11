@@ -1,6 +1,6 @@
 {
   "name": "use-search-table",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "基于antd4.0封装的搜索表格hooks",
   "main": "./src/index.ts",
   "scripts": {
@@ -19,6 +19,6 @@
   "dependencies": {
     "@types/lodash.clonedeep": "^4.5.7",
     "lodash.clonedeep": "^4.5.0",
-    "use-deep-compare-effect": "^0.0.2"
+    "use-deep-compare-effect": "^0.0.3"
   }
 }

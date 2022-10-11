@@ -1,6 +1,6 @@
 {
   "name": "use-virtual-list",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "虚拟滚动hooks",
   "main": "./src/index.ts",
   "scripts": {
@@ -17,6 +17,6 @@
     "url": "https://github.com/qinglongs/react-hooks"
   },
   "dependencies": {
-    "use-deep-compare-effect": "^0.0.2"
+    "use-deep-compare-effect": "^0.0.3"
   }
 }

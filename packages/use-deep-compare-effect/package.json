@@ -1,6 +1,6 @@
 {
   "name": "use-deep-compare-effect",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "深比较effect hooks",
   "main": "./src/index.ts",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "use-deep-comparison": "^0.0.2"
+    "use-deep-comparison": "^0.0.3"
   }
 }
