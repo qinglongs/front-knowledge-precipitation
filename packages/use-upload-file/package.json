@@ -12,6 +12,10 @@
   ],
   "author": "924229679@qq.com",
   "license": "ISC",
+  "homepage": "https://github.com/qinglongs/react-hooks",
+  "repository": {
+    "url": "https://github.com/qinglongs/react-hooks"
+  },
   "dependencies": {
     "@types/lodash.clonedeep": "^4.5.7",
     "lodash.clonedeep": "^4.5.0"

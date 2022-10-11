@@ -10,6 +10,10 @@
   "keywords": [
     "简易懒加载自定义hooks"
   ],
+  "homepage": "https://github.com/qinglongs/react-hooks",
+  "repository": {
+    "url": "https://github.com/qinglongs/react-hooks"
+  },
   "author": "924229679@qq.com",
   "license": "ISC"
 }

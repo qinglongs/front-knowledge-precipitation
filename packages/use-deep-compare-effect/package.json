@@ -11,6 +11,10 @@
     "深比较副作用hooks"
   ],
   "author": "924229679@qq.com",
+  "homepage": "https://github.com/qinglongs/react-hooks",
+  "repository": {
+    "url": "https://github.com/qinglongs/react-hooks"
+  },
   "license": "ISC",
   "dependencies": {
     "use-deep-comparison": "^0.0.2"

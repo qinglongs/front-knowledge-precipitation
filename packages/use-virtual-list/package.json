@@ -12,6 +12,10 @@
   ],
   "author": "924229679@qq.com",
   "license": "ISC",
+  "homepage": "https://github.com/qinglongs/react-hooks",
+  "repository": {
+    "url": "https://github.com/qinglongs/react-hooks"
+  },
   "dependencies": {
     "use-deep-compare-effect": "^0.0.2"
   }
