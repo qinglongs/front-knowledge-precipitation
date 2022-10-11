@@ -1,6 +1,6 @@
 {
   "name": "use-deep-compare-effect",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "深比较effect hooks",
   "main": "./src/index.ts",
   "scripts": {
@@ -14,7 +14,7 @@
   "homepage": "https://github.com/qinglongs/react-hooks",
   "license": "ISC",
   "dependencies": {
-    "use-deep-comparison": "^0.0.3"
+    "use-deep-comparison": "^0.0.4"
   },
   "gitHead": "085456981bdb5bbb9bd853a1bc5f3b7c1e8bab5a"
 }

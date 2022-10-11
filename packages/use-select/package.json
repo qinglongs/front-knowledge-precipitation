@@ -1,6 +1,6 @@
 {
   "name": "use-select",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "antd3.0下拉选择hooks，支持分页加载",
   "main": "./src/index.ts",
   "scripts": {
@@ -18,7 +18,7 @@
     "@types/lodash.debounce": "^4.0.7",
     "lodash.clonedeep": "^4.5.0",
     "lodash.debounce": "^4.0.8",
-    "use-deep-compare-effect": "^0.0.3"
+    "use-deep-compare-effect": "^0.0.4"
   },
   "gitHead": "085456981bdb5bbb9bd853a1bc5f3b7c1e8bab5a"
 }

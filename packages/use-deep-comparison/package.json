@@ -1,6 +1,6 @@
 {
   "name": "use-deep-comparison",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "深比较依赖，当依赖发生变化是返回新数据",
   "main": "./src/index.ts",
   "scripts": {

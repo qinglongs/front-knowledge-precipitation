@@ -1,6 +1,6 @@
 {
   "name": "use-upload-file",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "antd3.0文件上传hooks",
   "main": "./src/index.ts",
   "scripts": {
