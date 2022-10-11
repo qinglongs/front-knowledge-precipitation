@@ -6,9 +6,14 @@
 
 ```
 packages ---------------- 代码库
-  hooks ----------------- react自定义hooks集合
-  ts-demo --------------- ts代码集合
-  tsx-demo -------------- tsx代码集合
+  use-deep-compare-effect ----------------- 深比较effect
+  use-deep-comparison --------------------- 深比较变量
+  use-lazy-load --------------------------- 懒加载
+  use-search-table ------------------------ 搜索列表
+  use-select ------------------------------ antd3.x下拉选择
+  use-upload-file ------------------------- antd3.x文件上传
+  use-virtual-list ------------------------ 虚拟滚动列表
+
 public ------------------ 静态文件
 src --------------------- 脚手架相关业务
   pages ----------------- 路由页面
@@ -23,11 +28,14 @@ tsx.build.json ---------- react-tsx模块编译配置
 
 ```
 <!-- 启动项目 -->
+
 yarn or npm install
+
 yarn start or npm run start
 
 <!-- 打包模块  -->
 lerna run build
+
 ```
 
 #### `单元测试`
